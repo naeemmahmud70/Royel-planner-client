@@ -1,0 +1,28 @@
+.main-header{
+    height: 500px;
+    background-image:url(../../../../images/bg-2-1.jpg);
+    background-size: cover;
+    filter: blur(2px);
+    -webkit-filter: blur(2px);
+    
+}
+.bg-text{
+    background-color: rgb(0,0,0); 
+    background-color: rgba(0,0,0, 0.4); 
+    color: white;
+    font-weight: bold;
+    border: 1px solid #f1f1f1;
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 50;
+    padding: 20px;
+    text-align: center;
+}
+.button-style{
+    border: 0;
+    border-radius: 10px;
+    background-color: #FE3E01;
+    color: white;
+}

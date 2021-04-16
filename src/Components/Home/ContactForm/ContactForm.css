@@ -1,0 +1,13 @@
+.contact::before{
+    position: absolute;
+    content: "";
+    top:0;
+    width: 95.5%;
+    height: 550px;
+    background: #fe3c01da;
+    opacity: .9;
+    z-index: -1;
+}
+.bg-color{
+    background: #fe3c01da;
+}

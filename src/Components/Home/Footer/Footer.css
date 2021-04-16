@@ -1,0 +1,16 @@
+.footer-area li{
+    padding-bottom: 10px;
+}
+
+.social-media .icon{
+    height: 40px;
+    width: 40px;
+    color: #FE3E01;
+    border-radius: 50%;
+    border: 1px solid #FE3E01;
+    padding: 10px;
+}
+.social-media .active-icon{
+    background-color: #FE3E01 ;
+    color:white;
+}

@@ -1,0 +1,16 @@
+.image-style img{
+    width: 250px;
+    height: 150px;
+}
+.btn-style{
+    border: 0;
+    color:white;
+    background-color: #FE3E01;
+    border-radius: 5px;
+    padding: 5px 10px;
+}
+.card-style{
+    width: 280px;
+    height: 280px;
+    border-radius: 5px;
+}
