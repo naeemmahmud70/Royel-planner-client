@@ -22,7 +22,7 @@ const Event = () => {
     const onSubmit = data => {
         setShippingData(data)
     }
-    
+
     const handlePaymentSuccess = paymentId => {
         const orderDetails = {
             ...loggedInUser,
@@ -31,16 +31,18 @@ const Event = () => {
             oderTime: new Date()
         }
         console.log(orderDetails)
+        const url = `http://localhost:5000/addOrder`;
+        fetch(url, {
+            method: 'POST',
+            headers: {
+                'content-type': 'application/json'
+            },
+            body: JSON.stringify(orderDetails)
+        })
+            .then(res => console.log('server side response', res))
+
     }
-    // const url = `http://localhost:5000/addReview`;
-    // fetch(url, {
-    //     method: 'POST',
-    //     headers: {
-    //         'content-type': 'application/json'
-    //     },
-    //     body: JSON.stringify(reviewData)
-    // })
-    //     .then(res => console.log('server side response', res))
+
 
 
 
@@ -48,7 +50,7 @@ const Event = () => {
 
     return (
         <div>
-            <div style={{display: shippingData? 'none': 'block'}} className="w-75 p-5 m-5 shadow rounded">
+            <div style={{ display: shippingData ? 'none' : 'block' }} className="w-75 p-5 m-5 shadow rounded">
                 <h3 className="fw-bold">Order</h3>
                 <div>
                     <form onSubmit={handleSubmit(onSubmit)}>
@@ -70,7 +72,7 @@ const Event = () => {
             </div>
 
             <hr />
-            <div style={{display: shippingData? 'block': 'none'}} className="shadow m-5 p-5">
+            <div style={{ display: shippingData ? 'block' : 'none' }} className="shadow m-5 p-5">
                 <div>
                     <h5 className="fw-bold">Pay here</h5>
                     <h6>You will charged: {event.price}</h6>

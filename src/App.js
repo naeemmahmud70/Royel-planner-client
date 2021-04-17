@@ -13,6 +13,7 @@ import AddServices from './Components/DashBoard/AddService/AddServices';
 import Event from './Components/Home/Home/Event/Event';
 import Login from './Components/Login/Login';
 import PrivateRoute from './Components/Login/PrivateRoute/PrivateRoute';
+import OrderList from './Components/OrderList/OrderList';
 
 export const UserContext = createContext();
 
@@ -40,6 +41,9 @@ function App() {
             </Route>
             <Route path="/login">
               <Login></Login>
+            </Route>
+            <Route path="/order">
+              <OrderList></OrderList>
             </Route>
             <Route exact path="/">
               <Home></Home>

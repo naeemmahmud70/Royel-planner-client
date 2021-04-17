@@ -47,24 +47,28 @@ const AddServices = () => {
 
     return (
         <div className="row">
-            <div className="col-md-4">
+            <div className="col-md-3">
                 <Sidebar></Sidebar>
             </div>
-            <div style={{position:"absolute", right: 0, backgroundColor: "#F4FDFB"}} className="shadow p-5 w-75 col-md-8">
-                <form onSubmit={handleSubmit(onSubmit)}>
-                    <div className="form-group w-50">
-                        <input name="name" className="form-control" placeholder="event name" ref={register} />
-                    </div>
-                    <div className="form-group w-50">
-                        <input name="price" className="form-control" placeholder="event cost" ref={register} />
-                    </div>
-                    <div className="form-group w-50">
-                        <input name="exampleRequired" type="file" onChange={handleImageUpload} />
-                    </div>
+            <div className="w-75 col-md-9">
+                <h4 className="fw-bold mt-2">Add Event Service</h4>
+                <hr/>
+                <div className="shadow p-5">
+                    <form onSubmit={handleSubmit(onSubmit)}>
+                        <div className="form-group w-50">
+                            <input name="name" className="form-control" placeholder="event name" ref={register} />
+                        </div>
+                        <div className="form-group w-50">
+                            <input name="price" className="form-control" placeholder="event cost" ref={register} />
+                        </div>
+                        <div className="form-group w-50">
+                            <input name="exampleRequired" type="file" onChange={handleImageUpload} />
+                        </div>
 
 
-                    <input value="Submit" className="btn-style" type="submit" />
-                </form>
+                        <input value="Submit" className="btn-style" type="submit" />
+                    </form>
+                </div>
             </div>
         </div>
     );

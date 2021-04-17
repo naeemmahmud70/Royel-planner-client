@@ -26,10 +26,13 @@ const Review = () => {
 
     return (
         <div className="row">
-            <div className="col-md-4">
+            <div className="col-md-3">
             <Sidebar></Sidebar>
             </div>
-        <div style={{position:"absolute", right: 0}} className="shadow p-5 w-75 col-md-8">
+        <div className="w-75 col-md-9">
+            <h4 className="fw-bold mt-2">Give your review here</h4>
+            <hr/>
+            <div className="shadow p-5">
             <form onSubmit={handleSubmit(onSubmit)}>
                 <div className="form-group w-50">
                     <input name="name" className="form-control" placeholder=" write your name" ref={register} />
@@ -42,6 +45,7 @@ const Review = () => {
                 </div>
                 <input value="submit" className="btn-style" type="submit" />
             </form>
+            </div>
         </div>
         </div>
     );
